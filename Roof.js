@@ -4,6 +4,7 @@ class Roof {
           'restitution':0.8,
           'friction':1.0,
           'density':1000,
+          'isStatic':true
       }
       this.body = Bodies.rectangle(x, y, width, height, options);
       this.width = width;
@@ -19,7 +20,7 @@ class Roof {
       translate(pos.x, pos.y);
       rotate(angle);
       rectMode(CENTER);
-      fill(255);
+      fill("white");
       rect(0, 0, this.width, this.height);
       pop();
     }

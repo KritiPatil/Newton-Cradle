@@ -20,7 +20,7 @@ class Roof {
       translate(pos.x, pos.y);
       rotate(angle);
       rectMode(CENTER);
-      fill("white");
+      fill("gray");
       rect(0, 0, this.width, this.height);
       pop();
     }

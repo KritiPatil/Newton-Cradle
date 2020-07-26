@@ -26,23 +26,23 @@ function setup() {
 	World.add(world, ground);
 
 	//Create the Bodies Here.
-	  bob1 = new Bob(300, 700, 50);
+	  bob1 = new Bob(300, 700, 25);
 	  bob1.debug = true;
-	  bob2 = new Bob(350, 700, 50);
-	  bob3 = new Bob(400, 700, 50);
-	  bob4 = new Bob(450, 700, 50);
-	  bob5 = new Bob(500, 700, 50);
+	  bob2 = new Bob(350, 700, 25);
+	  bob3 = new Bob(400, 700, 25);
+	  bob4 = new Bob(450, 700, 25);
+	  bob5 = new Bob(500, 700, 25);
 	  console.log(bob3);
 
 	  bobDiameter = bob1.diameter;
 
 	  roof = new Roof(395, 300, 300, 30);
 
-	  rope1 = new Rope(bob1.body, roof.body, -98, 10);
-	  rope2 = new Rope(bob2.body, roof.body, -45, 10);
-	  rope3 = new Rope(bob3.body, roof.body, 5, 10);
-	  rope4 = new Rope(bob4.body, roof.body, 50, 10);
-	  rope5 = new Rope(bob5.body, roof.body, 98, 10);
+	  rope1 = new Rope(bob1.body, roof.body, -98, 0);
+	  rope2 = new Rope(bob2.body, roof.body, -45, 0);
+	  rope3 = new Rope(bob3.body, roof.body, 5, 0);
+	  rope4 = new Rope(bob4.body, roof.body, 50, 0);
+	  rope5 = new Rope(bob5.body, roof.body, 98, 0);
 
 	Engine.run(engine);
   
@@ -75,7 +75,7 @@ function draw() {
 
 function keyPressed() {
 	if(keyCode 	=== UP_ARROW) {
-       Matter.Body.applyForce(bob1.body, bob1.body.position, {x:-10, y:9});
+       Matter.Body.applyForce(bob1.body, bob1.body.position, {x:-100, y:0});
 	}
 }
 

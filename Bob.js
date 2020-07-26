@@ -2,10 +2,10 @@ class Bob {
     constructor(x, y, radius) {
       var options = {
           'isStatic' : false,
-          'restitution':0,
+          'restitution':1,
           'friction':0,
-          'density':12,
-          'inertia': 0
+          'density':0.55,
+          'inertia': Infinity
       }
       this.body = Bodies.circle(x, y, radius, options);
       this.radius = radius;
@@ -19,9 +19,9 @@ class Bob {
       push();
       translate(pos.x, pos.y);
       rotate(angle);
-      ellipseMode(CENTER);
+      ellipseMode(RADIUS);
       fill("pink");
-      ellipse(0, 0, this.radius);
+      ellipse(0, 0, this.radius, this.radius);
       pop();
     }
   };
